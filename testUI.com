@@ -7,7 +7,6 @@ local UIlibrary = {
   flags = {}
 }
 UIlibrary.Flags = UIlibrary.flags
-print(UIlibrary)
 --// Dependences --//
 local CoreGui = game:GetService("CoreGui")
 local TweenService = game:GetService("TweenService")
@@ -16,12 +15,6 @@ local RunService = game:GetService("RunService")
 local ViewportSize = workspace.CurrentCamera.ViewportSize
 local Mouse = game.Players.LocalPlayer:GetMouse()
 local Utilities = {}
---// Compatibility //--
-local request = syn and syn.request or http and http.request or http_request or request or httprequest
---local getcustomasset = getcustomasset or getsynasset
-local isfolder = isfolder or syn_isfolder or is_folder
-local makefolder = makefolder or make_folder or createfolder or create_folder
---//
 local DropIndex = 9999
 function Utilities:Create(Inst, Properties, Childs)
   local Instance = Instance.new(Inst)
@@ -67,15 +60,6 @@ function Utilities:GetXY(GuiObject)
 function Utilities:GetMouse()
   return Vector2.new(UserInputService:GetMouseLocation().X + 1, UserInputService:GetMouseLocation().Y - 35)
 end
---[[
-if not isfolder("PPHUD") then
-  makefolder("PPHUD")
-  local Arrow = request({Url = "https://raw.githubusercontent.com/Rain-Design/PPHUD/main/Dropdown.png", Method = "GET"})
-  writefile("PPHUD/Arrow.png", Arrow.Body)
-  local Resize = request({Url = "https://raw.githubusercontent.com/Rain-Design/PPHUD/main/resize.png", Method = "GET"})
-  writefile("PPHUD/Resize.png", Resize.Body)
-end]]
---//
 --// Colors --//
 local Colors = {
   Primary = Color3.fromRGB(27, 25, 27),
@@ -903,9 +887,9 @@ function UIlibrary:Window(WindowArgs)
                 Size = UDim2.new(1, 0, 0, 14),
                 ZIndex = DropdownTable.Index
               }),
-              Utilities:Create("Frame", {
+              Utilities:Create("ScrollingFrame", {
                 Name = "DropdownContainer",
-                Size = UDim2.new(1, 0, 0, 0),
+                Size = UDim2.new(1, 0, 0, 14*10),
                 BackgroundTransparency = 1,
                 ClipsDescendants = true,
                 Position = UDim2.new(0, 0, 0, 14),
