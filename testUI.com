@@ -1015,7 +1015,7 @@ function UIlibrary:Window(WindowArgs)
           end
           function DropdownTable:Refresh(table)
             for _, v in pairs(DropdownContainer:GetChildren()) do
-              if v.ClassName == "Frame" then
+              if v.ClassName == "Frame" or v.ClassName == "ScrollingFrame" then
                 v:Destroy()
                 DropdownY = DropdownY - 14
                 if State then
