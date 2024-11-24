@@ -289,14 +289,7 @@ function UIlibrary:Window(WindowArgs)
     })
   })
   end
-  if syn.protect_gui then
-    syn.protect_gui(Window)
-    Window.Parent = CoreGui
-  elseif gethui then
-    Window.Parent = gethui()
-  else
-    Window.Parent = CoreGui
-  end
+  Window.Parent = CoreGui
   local ResizeButton = Window.Main.Bottom.ResizeIcon.ResizeButton
   local TabContainer = Window.Main.Topbar.TabContainer
   local Containers = Window.Main.Containers
