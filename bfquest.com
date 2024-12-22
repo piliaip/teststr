@@ -15,7 +15,7 @@ local CheckQuest = {
   end,
   CheckQuest=function(self,lv)
     local MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
-    if lv~=nil then 
+    if lv~=nil or lv<>0 then 
       MyLevel = lv
     end
     MyLevel = self:CheckMaxLevel(MyLevel)
@@ -28,7 +28,7 @@ local CheckQuest = {
           self.LevelQuest = 1
           self.NameQuest = "BanditQuest1"
           self.NameMon = "Bandit"
-          self.CFrameQuest = CFrame.new(1059.37195, 15.4495068, 1550.4231, 0.939700544)
+          self.CFrameQuest = CFrame.new(1059.37195, 15.4495068, 1550.4231)
           self.CFrameMon = CFrame.new(1045.962646484375, 27.00250816345215, 1560.8203125)
       elseif MyLevel == 10 or MyLevel <= 14 then
           self.Mon = "Monkey"
@@ -622,4 +622,3 @@ local CheckQuest = {
 return CheckQuest
 --print(CheckQuest:CheckQuest())
 --table.foreach(CheckQuest,print)
-
