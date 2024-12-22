@@ -15,7 +15,7 @@ local CheckQuest = {
   end,
   CheckQuest=function(self,lv)
     local MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
-    if lv~=nil or lv~=0 then 
+    if lv~=nil and lv~=0 then 
       MyLevel = lv
     end
     MyLevel = self:CheckMaxLevel(MyLevel)
