@@ -168,7 +168,7 @@ local CheckQuest = {
           self.LevelQuest = 1
           self.NameQuest = "SkyExp1Quest"
           self.NameMon = "God's Guard"
-          self.CFrameQuest = CFrame.new(-4721.88867, 843.874695, -1949.96643, 0.996191859)
+          self.CFrameQuest = CFrame.new(-4721.88867, 843.874695, -1949.96643)
           self.CFrameMon = CFrame.new(-4710.04296875, 845.2769775390625, -1927.3079833984375)
       elseif MyLevel == 475 or MyLevel <= 524 then
           self.Mon = "Shanda"
