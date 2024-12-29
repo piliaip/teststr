@@ -380,13 +380,13 @@ local CheckQuest = {
       elseif MyLevel == 1575 or MyLevel <= 1599 then
           self.Mon = "Dragon Crew Warrior"
           self.LevelQuest = 1
-          self.NameQuest = "AmazonQuest"
+          self.NameQuest = "DragonCrewQuest"
           self.NameMon = "Dragon Crew Warrior"
           self.CFrameQuest = CFrame.new(6735.27881, 127.749596, -707.887878)
           self.CFrameMon = CFrame.new(6141.140625, 51.35136413574219, -1340.738525390625)
       elseif MyLevel == 1600 or MyLevel <= 1624 then 
           self.Mon = "Dragon Crew Archer"
-          self.NameQuest = "AmazonQuest"
+          self.NameQuest = "DragonCrewQuest"
           self.LevelQuest = 2
           self.NameMon = "Dragon Crew Archer"
           self.CFrameQuest = CFrame.new(6735.27881, 127.749596, -707.887878)
